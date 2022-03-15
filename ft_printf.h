@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 12:20:22 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/11 15:32:04 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/15 14:24:08 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int		ft_printf(const char *str, ...);
 int		ft_strlen(char *str);
-int		ft_count_return(void);	
+int		ft_count_return(int nb);	
 void	ft_after_percentage(va_list ap, char c);
 void	ft_return(char *base, int n[50], int nbr);
 void	ft_putnbr_base(int nbr, char *base);

@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:37:08 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/11 15:54:25 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:16:17 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	ap;
 	int		cont;
+	int		ret;
 
 	cont = 0;
 	va_start(ap, str);
@@ -50,28 +51,11 @@ int	ft_printf(const char *str, ...)
 			continue ;
 		}
 		write(1, &str[cont], 1);
-		ft_count_return();
+		ft_count_return(0);
 		cont++;
 	}
 	va_end(ap);
-	return (ft_count_return());
+	ret = ft_count_return(0) - 1;
+	ft_count_return(1);
+	return (ret);
 }
-
-/*int main(void)
-{
-	int cont;
-	int ret;
-	int ret_2;
-	char c;
-	char *str;
-
-	cont = 34;
-	c = 'f';
-	str = "uva";
-
-	ret_2 = ft_printf("banana %c %s %p %d %i %u %x %X %%\n", c, str, cont, cont, cont, cont, cont, cont);
-	ret = printf("banana %c %s %p %d %i %u %x %X %%\n", c, str, cont, cont, cont, cont, cont, cont);
-
-	printf("%i\n", ret);
-	printf("%i", ret_2);
-}*/

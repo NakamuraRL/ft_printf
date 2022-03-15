@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 12:01:03 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/11 15:39:47 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:02:00 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ void	ft_return(char *base, int n[50], int nbr)
 	while (cont >= 0)
 	{
 		write(1, &base[n[cont]], 1);
-		ft_count_return();
+		ft_count_return(0);
 		cont--;
 	}
+	ft_count_return(-1);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
@@ -45,7 +46,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (nbr < 0)
 	{
 		write (1, "-", 1);
-		ft_count_return();
+		ft_count_return(0);
 		nbr *= -1;
 	}
 	cont = 0;

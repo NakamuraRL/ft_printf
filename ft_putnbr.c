@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 11:58:36 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/11 15:41:15 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/15 14:24:49 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ void	ft_putnbr(int nb)
 			return ;
 		}
 		write(1, "-", 1);
-		ft_count_return();
+		ft_count_return(0);
 		nb = nb * (-1);
 	}
 	if (nb >= 0 && nb <= 9)
 	{
 		nb = nb + '0';
 		write(1, &nb, 1);
-		ft_count_return();
+		ft_count_return(0);
 	}
 	else
 	{
 		ft_putnbr(nb / 10);
 		nb = nb % 10 + '0';
 		write(1, &nb, 1);
-		ft_count_return();
+		ft_count_return(0);
 	}
 }

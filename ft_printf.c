@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:37:08 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/15 15:16:17 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 13:34:58 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ void	ft_after_percentage(va_list ap, char c)
 	if (c == 's')
 		ft_putstr(va_arg(ap, char *));
 	if (c == 'p')
-		ft_percentage_p(va_arg(ap, int));
+		ft_percentage_p(va_arg(ap, long unsigned));
 	if (c == 'd')
 		ft_putnbr(va_arg(ap, int));
 	if (c == 'i')
 		ft_putnbr(va_arg(ap, int));
 	if (c == 'u')
-		ft_putnbr(va_arg(ap, unsigned int));
+		ft_uns_putnbr(va_arg(ap, unsigned int));
 	if (c == 'x')
-		ft_putnbr_base(va_arg(ap, int), "0123456789abcdef");
+		ft_puthex(va_arg(ap, int), "0123456789abcdef");
 	if (c == 'X')
-		ft_putnbr_base(va_arg(ap, int), "0123456789ABCDEF");
+		ft_puthex(va_arg(ap, int), "0123456789ABCDEF");
 	if (c == '%')
 		ft_putchar('%');
 }

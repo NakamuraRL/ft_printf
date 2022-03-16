@@ -1,5 +1,6 @@
 SRC = ./ft_count_return.c ./ft_percentage_p.c ./ft_printf.c ./ft_putchar.c\
-./ft_putnbr_base.c ./ft_putnbr.c ./ft_putstr.c ./ft_strlen.c
+./ft_putnbr_base.c ./ft_putnbr.c ./ft_putstr.c ./ft_strlen.c ./ft_uns_putnbr.c\
+./ft_puthex.c
 
 OBJ = ${SRC:.c=.o}
 

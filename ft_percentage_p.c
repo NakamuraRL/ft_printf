@@ -6,13 +6,13 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 14:02:32 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/11 14:04:52 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:41:44 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_percentage_p(int nbr)
+void	ft_percentage_p(long unsigned nbr)
 {
 	ft_putstr("0x");
 	if (nbr == 0)

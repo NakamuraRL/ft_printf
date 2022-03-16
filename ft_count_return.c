@@ -6,7 +6,7 @@
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 15:21:11 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/15 15:01:25 by grocha-l         ###   ########.fr       */
+/*   Updated: 2022/03/16 11:03:08 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int	ft_count_return(int nb)
 		cont = 0;
 	if (nb == -1)
 		cont -= 1;
+	if (nb != 0 && nb != 1 && nb != -1)
+		cont += nb;
 	return (cont);
 }

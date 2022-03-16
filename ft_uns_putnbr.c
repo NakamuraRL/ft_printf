@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_uns_putnbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grocha-l <grocha-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 11:59:22 by grocha-l          #+#    #+#             */
-/*   Updated: 2022/03/16 10:58:25 by grocha-l         ###   ########.fr       */
+/*   Created: 2022/03/16 12:52:37 by grocha-l          #+#    #+#             */
+/*   Updated: 2022/03/16 13:00:15 by grocha-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str)
+int	ft_uns_putnbr(unsigned int nb)
 {
-	char	x;
-	int		cont;
+	int i;
 
-	cont = 0;
-	x = '0';
-	if (str == NULL)
+	i = 0;
+	if (nb < 10)
+		i += ft_putchar(nb + '0');
+	else
 	{
-		write(1, "(null)", 6);
-		ft_count_return(6);
-		return ;
+		i += ft_uns_putnbr(nb / 10);
+		i += ft_uns_putnbr(nb % 10);
 	}
-	while (str[cont] != '\0')
-	{
-		x = str[cont];
-		write(1, &x, 1);
-		ft_count_return(0);
-		cont++;
-	}
+	return (i);
 }
